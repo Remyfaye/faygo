@@ -1,0 +1,17 @@
+
+
+.about-container{
+    text-align: start;
+    /* padding-bottom: 1rem;    */
+    margin: 4rem 5rem;
+}
+/* .about{
+    margin: 4rem 15rem;
+} */
+
+@media screen and (max-width:850px){
+    .about-container{
+        margin: 3rem 2rem;
+    }
+    
+}
