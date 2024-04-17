@@ -22,7 +22,7 @@
 .flight-top {
   display: flex;
   margin: 20px;
-  background-color: white;
+  background-color: rgb(243, 239, 239);
   border-radius: 10px;
 }
 .top-option {
@@ -33,10 +33,14 @@
   font-weight: 700;
 }
 .fight-deals {
-  background-color: white;
+  background-color: whitw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 20px;
   border-radius: 10px;
   padding: 10px;
+}
+.fight-deals h4 {
+  margin-top: 10px;
 }
 .bottom-toggle {
   display: flex;
@@ -69,6 +73,8 @@
   padding: 6px;
   border-radius: 10px;
   color: white;
+  margin: 20px 10px;
+  cursor: pointer;
 }
 .price-section {
   display: flex;
@@ -159,6 +165,7 @@ select {
   margin: 30px 10px 10px 0px;
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .t-card h4 {

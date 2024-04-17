@@ -1,58 +1,50 @@
-
-
-import React, { Component } from 'react'
-import './navbar.css'
-
+import React, { Component } from "react";
+import "./navbar.css";
 
 export default class Navbar extends Component {
-  state = {clicked:false}
-  handleClick = ()=>{
-    this.setState({ clicked: !this.state.clicked})
-  }
+  state = { clicked: false };
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
   render() {
     return (
-      <nav className='navbarItems'>
-      <h1 className='navbar-logo'>fayGo</h1>
+      <nav className="navbarItems">
+        <h1 className="navbar-logo">fayGo</h1>
 
-      <div className='menu_icons' onClick={this.handleClick}>
-        <i className={this.state.clicked ?
-        'fas fa-times' : 'fas fa-bars'}></i>
-      </div>
+        <div className="menu_icons" onClick={this.handleClick}>
+          <i
+            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+          ></i>
+        </div>
 
-      <ul className={this.state.clicked ?'nav-menu active' 
-      : "nav-menu"}>
-
-        <li>
-            <a href='/' className='nav-links'>
-            <i className="fa-solid fa-house-user"></i>Home
+        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+          <li>
+            <a href="/" className="nav-links">
+              <i className="fa-solid fa-house-user"></i>Home
             </a>
-        </li>
+          </li>
 
-        <li >
- <a href='/about' className='nav-links'>
-            <i className="fa-solid fa-circle-info"></i>About
+          <li>
+            <a href="/about" className="nav-links">
+              <i className="fa-solid fa-circle-info"></i>About
             </a>
-        </li>
+          </li>
 
-        <li >
-
-            <a href='/service' className='nav-links'>
-            <i className="fa-solid fa-briefcase"></i>Service
+          <li>
+            <a href="/service" className="nav-links">
+              <i className="fa-solid fa-briefcase"></i>Flight
             </a>
+          </li>
 
-        </li>
-
-        <li>
-        <a href='/contact' className='nav-links'>
-            <i className="fa-solid fa-address-book"></i>Contact
+          <li>
+            <a href="/contact" className="nav-links">
+              <i className="fa-solid fa-address-book"></i>Contact
             </a>
-        </li>
+          </li>
 
-        <button className='nav-links'>Sign up</button>
-      </ul>
-
-    </nav>
-    )
+          <button className="nav-links">Sign up</button>
+        </ul>
+      </nav>
+    );
   }
 }
-

@@ -3,7 +3,6 @@ import image1 from "../assets/uti4.avif";
 import Hero from "../components/hero/Hero";
 import ResentTrips from "../components/resent trips/ResentTrips";
 import FlightForm from "../components/flightForm/FlightForm";
-import TicketForm from "../components/ticketForm/TicketForm";
 
 function Services() {
   return (
