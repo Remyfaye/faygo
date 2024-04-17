@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
-// import "./_minxins.scss";
-// import "./_vars.scss";
+// import "./mixins.css";
+// import "./vars.css";
 
 /* eslint-disable no-undef */
 const select = document.querySelectorAll(".selectBtn");
 const option = document.querySelectorAll(".option");
 let index = 1;
-
+// let $;
 select.forEach((a) => {
   a.addEventListener("click", (b) => {
     const next = b.target.nextElementSibling;
-    next.classList.toggle("toggle");
+    next.classList?.toggle("toggle");
     next.style.zIndex = index++;
+
+    // <div>hi</div>;
   });
 });
 option.forEach((a) => {
@@ -26,12 +28,16 @@ option.forEach((a) => {
   });
 });
 // eslint-disable-next-line no-undef
-// $(function () {
-//   $("#sourcedatepicker").datepicker();
-//   $("#destinationdatepicker").datepicker();
-// });
 
 const TicketForm = () => {
+  useEffect(() => {
+    const $ = () => () => {
+      $("#sourcedatepicker").datepicker();
+      $("#destinationdatepicker").datepicker();
+    };
+
+    $();
+  }, []);
   return (
     <div class="container">
       <h3 class="getquotetext">Get Quote</h3>
@@ -47,6 +53,12 @@ const TicketForm = () => {
             </button>
           </div>
           <p>From</p>
+          {/* <select class="select">
+            <option>enugu</option>
+            <option>lagos</option>
+            <option>calabar</option>
+          </select> */}
+
           <div class="select">
             <div class="selectBtn" data-type="firstOption">
               <i class="fas fa-map-marker-alt"></i>lagos
@@ -64,6 +76,12 @@ const TicketForm = () => {
             </div>
           </div>
           <p>To</p>
+          {/* <select className="selectContainer">
+            <option>enugu</option>
+            <option>lagos</option>
+            <option>calabar</option>
+          </select> */}
+
           <div class="select">
             <div class="selectBtn" data-type="firstOption">
               <i class="fas fa-map-marker-alt"></i>Enugu

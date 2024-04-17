@@ -1,3 +1,80 @@
+@media only screen and (min-width: 800px) {
+  .media-screen {
+    display: flex;
+    justify-content: center;
+  }
+  .flight-top {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .top-option {
+    /* padding: 15px; */
+    border-right: none;
+  }
+  .top-option p {
+    font-weight: 700;
+  }
+}
+
+.flight-top {
+  display: flex;
+  margin: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.top-option {
+  padding: 15px;
+  border-right: 1px solid grey;
+}
+.top-option p {
+  font-weight: 700;
+}
+.fight-deals {
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.bottom-toggle {
+  display: flex;
+}
+.bottom-toggle :nth-child(1) {
+  padding: 6px 15px;
+  background-color: rgb(164, 200, 247);
+  border-radius: 10px;
+}
+.bottom-toggle :nth-child(2) {
+  padding: 6px 15px;
+  background-color: rgb(164, 247, 226);
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.bottom-main {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+}
+.line {
+  height: 1px;
+  width: 150px;
+  margin: 10px 25px;
+  background-color: grey;
+}
+.deal-btn {
+  background-color: rgb(0, 0, 145);
+  padding: 6px;
+  border-radius: 10px;
+  color: white;
+}
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
 .service {
   padding: 4rem 2rem;
 }
@@ -79,7 +156,9 @@ select {
   background-color: rgb(0, 0, 145);
   color: white;
   width: 70%;
-  margin: 30px 0px 10px 0px;
+  margin: 30px 10px 10px 0px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .t-card h4 {

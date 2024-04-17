@@ -1,5 +1,6 @@
 import React from "react";
 import "./flightForm.css";
+import { Link } from "react-router-dom";
 const FlightForm = () => {
   return (
     <div className="">
@@ -44,9 +45,9 @@ const FlightForm = () => {
             </select>
           </div>
         </form>
-        <button className="submit_btn" type="submit">
+        <Link to="/flight" className="submit_btn" type="submit">
           search flight
-        </button>
+        </Link>
       </div>
     </div>
   );

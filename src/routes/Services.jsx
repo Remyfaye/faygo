@@ -8,8 +8,8 @@ import TicketForm from "../components/ticketForm/TicketForm";
 function Services() {
   return (
     <div className="">
-      {/* <FlightForm /> */}
-      <TicketForm />
+      <FlightForm />
+      {/* <TicketForm /> */}
     </div>
   );
 }
