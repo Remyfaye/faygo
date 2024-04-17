@@ -9,60 +9,65 @@ const FlightForm = () => {
   console.log(from);
   return (
     <div className="">
-      <p className="form_title">book a flight</p>
       {/* <p>Tours give you the opportunity to see a lot within a time frame</p> */}
 
       {!hasChosenFlight && (
-        <div className="form_container">
-          <div className="drop_down">
-            <div className="option">
-              <p className="dropdown_btn_1"></p>
-              {/* <p>One Way</p> */}
+        <>
+          <p className="form_title">book a flight</p>
+          <div className="form_container">
+            <div className="drop_down">
+              <div className="option">
+                <p className="dropdown_btn_1"></p>
+                {/* <p>One Way</p> */}
+              </div>
+              <div className="option">
+                <p className="dropdown_btn"></p>
+                {/* <p>Round Trip</p> */}
+              </div>
+              <div className="option">
+                <p className="dropdown_btn"></p>
+                {/* <p>Multi city</p> */}
+              </div>
             </div>
-            <div className="option">
-              <p className="dropdown_btn"></p>
-              {/* <p>Round Trip</p> */}
-            </div>
-            <div className="option">
-              <p className="dropdown_btn"></p>
-              {/* <p>Multi city</p> */}
+
+            <form className="form">
+              <div className="form_option">
+                <p>Select Your Flight</p>
+                <input
+                  placeholder="from"
+                  onChange={(e) => setFrom(e.target.value)}
+                />
+                <input
+                  placeholder="to"
+                  onChange={(e) => setTo(e.target.value)}
+                />
+              </div>
+
+              <div className="form_option">
+                <p>Select Your date</p>
+
+                <input placeholder="select departure date"></input>
+                <input placeholder="select return date" />
+              </div>
+
+              <div className="form_option">
+                <p>Select Your passenger</p>
+                <select placeholder="select departure flight">
+                  <option placeholder="select arival flight">1 Adult</option>
+                  <option placeholder="select arival flight">Child</option>
+                  <option placeholder="select arival flight">infant</option>
+                </select>
+              </div>
+            </form>
+            <div
+              onClick={() => setHasChosenFlight(true)}
+              className="submit_btn"
+              type="submit"
+            >
+              search flight
             </div>
           </div>
-
-          <form className="form">
-            <div className="form_option">
-              <p>Select Your Flight</p>
-              <input
-                placeholder="from"
-                onChange={(e) => setFrom(e.target.value)}
-              />
-              <input placeholder="to" onChange={(e) => setTo(e.target.value)} />
-            </div>
-
-            <div className="form_option">
-              <p>Select Your date</p>
-
-              <input placeholder="select departure date"></input>
-              <input placeholder="select return date" />
-            </div>
-
-            <div className="form_option">
-              <p>Select Your passenger</p>
-              <select placeholder="select departure flight">
-                <option placeholder="select arival flight">1 Adult</option>
-                <option placeholder="select arival flight">Child</option>
-                <option placeholder="select arival flight">infant</option>
-              </select>
-            </div>
-          </form>
-          <div
-            onClick={() => setHasChosenFlight(true)}
-            className="submit_btn"
-            type="submit"
-          >
-            search flight
-          </div>
-        </div>
+        </>
       )}
 
       {hasChosenFlight && !isPoppup && (
@@ -85,9 +90,9 @@ const FlightForm = () => {
               <small>N 213,500</small>
             </div>
             {/* label 4 */}
-            <div className="top-option">
+            {/* <div className="top-option">
               <p> sort</p>
-            </div>
+            </div> */}
           </div>
 
           {/* bottom */}
@@ -251,7 +256,7 @@ const FlightForm = () => {
       )}
 
       {isPoppup && (
-        <div className="fight-deals">
+        <div className="pop">
           <p>Sucess!!!</p>
           <h4>you have sucessfully booked a flight</h4>
           <div
